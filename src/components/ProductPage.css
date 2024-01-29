@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(251, 251, 241);
+}
+
+.yoga-heading {
+  border-radius: 2px solid black;
+  border: black;
+  margin-bottom: 20px;
+}
+
+.left-image {
+  border-radius: 2px solid black;
+  border: black;
+  margin-top: 50px;
+}
+
+.yoga-description {
+  margin-top: 100px;
+}
+
+.package-description {
+  margin-top: 150px;
+}

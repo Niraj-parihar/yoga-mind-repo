@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(251, 251, 241);
+}
+
+/* h1 {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: 250;
+  color: rgb(34, 54, 73);
+}
+
+.line-2{
+  margin-left: 10px;
+  font-weight:  100px; 
+  color: gray;
+}
+
+.line-3{
+  margin-left: 10px;
+  font-weight:  100px; 
+  color: rgb(6, 206, 196);
+} */
