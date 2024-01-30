@@ -6,7 +6,7 @@ import { MdAccessTime } from "react-icons/md";
 
 const BatchSlotPage = () => {
   return (
-    <div>
+    <div className="container">
       <div className="heading">
         <h1 style={{ color: "#445F89" }}> Yoga for Mind</h1>
       </div>
