@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-// components/ProductPage.js
 import React from "react";
 import "./ProductPage.css";
 import leftImage from "../assets/Screenshot 2024-01-29 215052.png";
