@@ -26,7 +26,7 @@ const ProductPage = () => {
               The Yoga for Minf involves physical movement and relies on
               technique such as pranayama and meditation, Suited for women who
               cannot perfrom more physical forms of yoga and are looking for
-              relief from concerns such as stress, anxiety, low mood etc
+              relief from concerns such as stress, anxiety, low mood etc.
             </h3>
           </div>
         </div>
