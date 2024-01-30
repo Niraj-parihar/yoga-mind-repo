@@ -2,6 +2,7 @@ import React from "react";
 import "./BatchSlotPage.css";
 import "react-day-picker/dist/style.css";
 import image from "../assets/Screenshot 2024-01-29 215052.png";
+import { MdAccessTime } from "react-icons/md";
 
 const BatchSlotPage = () => {
   return (
@@ -52,18 +53,27 @@ const BatchSlotPage = () => {
         <div></div>
       </div>
 
-      {/* div for time picker*/}
-      {/* <div className="time-slot-card">
-        <h2>Select Time Slot</h2>
-        <div className="time-slot-info">
-          <input type="checkbox" id="timeSlotCheckbox" />
-          <label htmlFor="timeSlotCheckbox" className="checkbox-label"></label>
-          <div className="timing-weekday">
-            <p>10:00 AM - 11:00 AM</p>
-            <p>Monday</p>
-          </div>
+      {/* time slot picker*/}
+      <div className="slot-container">
+        <div className="time-slot-heading">
+          <h2 style={{ color: "#559EB0" }}>Select Time slot</h2>
         </div>
-      </div> */}
+        <div className="checkbox">
+          <input type="checkbox" name="time-picker" />
+        </div>
+
+        <div className="yoga-time-slot">
+          <MdAccessTime /> {"05:00PM - 05:40PM"}
+          <p style={{ fontSize: "10px" }}>MON, TUE, WED,THU, FRI</p>
+        </div>
+        <div className="yoga-time-slot">
+          <MdAccessTime /> {"08:00PM - 08:40PM"}
+          <p style={{ fontSize: "10px" }}>MON, TUE, WED,THU, FRI</p>
+        </div>
+        <div className="buy-btn">
+          <button>Buy package</button>
+        </div>
+      </div>
     </div>
   );
 };
