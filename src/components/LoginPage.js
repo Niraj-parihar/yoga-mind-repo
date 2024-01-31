@@ -1,8 +1,66 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LoginPage.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import styled from "styled-components";
+
+const Container = styled.div`
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(251, 251, 241);
+  }
+  h1 {
+    width: 100%;
+    height: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #22637f;
+  }
+  .form {
+    height: auto;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  #checkbox {
+    margin-right: 1rem;
+  }
+
+  #link {
+    text-decoration: none;
+    color: rgb(215, 86, 108);
+  }
+
+  button {
+    position: relative;
+    width: 20%;
+    left: 40%;
+    padding: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: rgb(215, 86, 108);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button:disabled {
+    background-color: #fd776e;
+    color: white;
+    cursor: pointer;
+  }
+`;
 
 const LoginPage = () => {
   const [agreeTerms, setAgreeTerms] = useState(false);
@@ -30,12 +88,13 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <Container>
       <div className="container">
         <h1>Login to your account</h1>
-        <form>
-          <label>
+        <div className="form">
+          <form>
             <PhoneInput
+              className="phoneInput"
               country={"in"}
               value={phoneNumber}
               onChange={handleChange}
@@ -43,38 +102,43 @@ const LoginPage = () => {
                 required: true,
               }}
             />
-          </label>
-          {!valid && <p>Please enter a valid phone number.</p>}
-          <br />
-          <label>
-            <input
-              type="checkbox"
-              checked={agreeTerms}
-              onChange={handleAgreeTermsChange}
-              required
-            />
-            I agree with the{" "}
-            <Link
-              to="https://github.com/Niraj-parihar/yoga-mind-repo"
-              onClick={() => {
-                alert("Redirecting to github");
-              }}
-            >
-              Terms & Condtions & Privacy policy
-            </Link>{" "}
-            of Elda Health
-          </label>
-          <br />
-          <button
-            type="button"
-            onClick={handleSendOTP}
-            disabled={!phoneNumber || !agreeTerms}
-          >
-            Send OTP
-          </button>
-        </form>
+            {!valid && <p>Please enter a valid phone number.</p>}
+            <br />
+            <span>
+              <label>
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  checked={agreeTerms}
+                  onChange={handleAgreeTermsChange}
+                  required
+                />
+                I agree with the{" "}
+                <Link
+                  id="link"
+                  to="https://github.com/Niraj-parihar/yoga-mind-repo"
+                  onClick={() => {
+                    alert("Redirecting to github");
+                  }}
+                >
+                  Terms & Condtions & Privacy policy
+                </Link>{" "}
+                of Elda Health
+              </label>
+            </span>
+            <div>
+              <button
+                type="button"
+                onClick={handleSendOTP}
+                disabled={!phoneNumber || !agreeTerms}
+              >
+                Send OTP
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
